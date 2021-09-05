@@ -1,0 +1,56 @@
+*{
+  margin: 0;
+}
+
+.content{
+  width: 700px;
+  height: 600px;
+  padding: 20px;
+  align-content: center;
+  background: linear-gradient(to right, rgb(28, 13, 36) 10px, rgb(54, 25, 68) 350px, rgb(28, 13, 36));
+  color: white;
+}
+
+.blank{
+  height: 20%;
+}
+
+.date{
+  text-align: center;
+  font-size: 26px;
+}
+
+#time{
+  margin-left: 150px;
+  font-size: 90px;
+  text-shadow: 0px 0px 20px darkblue;
+}
+
+.small-img{
+  margin-left: 15px;
+  width: 26px;
+  height: 26px;
+}
+
+.target{
+  text-align: center;
+  margin-left: 250px;
+}
+
+.num{
+  width: 40px;
+  text-align: center;
+}
+
+.ringing{
+  text-align: center;
+  margin: 20px auto;
+}
+
+.big-img{
+  width: 200px;
+  height: 200px;
+  text-align: center;
+}
+
+

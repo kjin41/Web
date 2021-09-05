@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>시계 화면 만들기</title>
+  <link rel="stylesheet" href="./css/hw4-4.css">
+  <script src="./js/hw4-4.js" type="text/javascript"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <div class="content">
+    <div class="blank"></div>
+    <div class="date">
+      <span id="date"></span> <span id="day"></span>
+    </div>
+    <div class="time">
+      <span id="time"></span> <img class="small-img" src="./img/alarm.png" alt="">
+    </div>
+    <div class="target">
+        <input type="text" name="hour" id="hour" value="" class="num"> 시
+        <input type="text" name="minute" id="minute" value="" class="num"> 분
+        <input type="button" value="설정하기" id="alarm">
+    </div>
+    <div class="ringing"><img src="./img/alarm.png" class="big-img" alt="" srcset=""></div>
+  </div>
+</body>
+</html>
