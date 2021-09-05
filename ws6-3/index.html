@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SSAFY BookCafe</title>
+  <link rel="stylesheet" href="./css/main.css">
+  <script src="./js/main.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <div class="header">
+    <nav class="nav navbar navbar-expand-sm bg-dark navbar-dark">
+      <a class="navbar-brand" href="#">SSAFY BookCafe</a>
+      <a class="navbar-brand" href="#">공지사항</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Links -->
+      <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+        <ul class="navbar-nav login">
+          <li class="nav-item login">
+            <a class="nav-link login" id="id-login" href="#">로그인</a>
+          </li>
+          <li class="nav-item login">
+            <a class="nav-link login" id="id-register" href="#">회원가입</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav logout" style="display: none;">
+          <li class="nav-item">
+            <a class="nav-link logout" id="id-logout" href="#">로그아웃</a>
+          </li>
+          <li class="nav-item logout">
+            <a class="nav-link" id="mypage" href="#">마이페이지</a>
+          </li>
+          <li class="nav-item logout">
+            <a class="nav-link" id="admin" href="#">관리자</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+  <div class="content">
+    <div class="content-left">
+      <div class="content-left-profile">
+        <img src="./img/noimg.png" alt="" class="before-profile">
+        <img src="./img/profile.png" alt="" class="after-profile">
+      </div>
+      <div class="content-left-store">
+        <div class="store-header">
+          <div class="store-open all-store">전국매장펼치기</div>
+          <div class="store-close all-store">전국매장접기</div>
+        </div>
+        <div class="store-areas">
+            <ul>
+              <li id="seoul" class="store-area">서울
+                <ul id="seoul-stores" class="store-area-detail">
+                  <li>역삼점</li>
+                  <li>선릉점</li>
+                </ul>
+              </li>
+              <li id="daejeon" class="store-area">대전
+                <ul id="daejeon-stores" class="store-area-detail">
+                  <li>학하점</li>
+                  <li>봉명점</li>
+                </ul>
+              </li>
+              <li id="gumi" class="store-area">구미
+                <ul id="gumi-stores" class="store-area-detail">
+                  <li>인동점</li>
+                  <li>공단점</li>
+                </ul>
+              </li>
+              <li id="gwangju" class="store-area">광주
+                <ul id="gwangju-stores" class="store-area-detail">
+                  <li>하남산단점</li>
+                  <li>광주역점</li>
+                </ul>
+              </li>
+              <li id="buulgyeong" class="store-area">부울경
+                <ul id="buulgyeong-stores" class="store-area-detail">
+                  <li>해운대점</li>
+                  <li>불국사점</li>
+                </ul>
+              </li>
+            </ul>
+        </div>
+      </div>
+      
+      <div class="content-left-poll">
+        <div>
+          <button type="button" class="btn btn-info btn-block mb-2" 
+           data-toggle="modal" data-target="#vote-modal">투표 만들기</button>
+        </div>
+
+        <div id="vote-area" class="border border-success p-3 mb-2">
+          <div id="vote-btn-area" class="text-center font-weight-bold">투표영역</div>
+        </div>
+
+      </div>
+    </div>
+  
+    <div class="content-section">
+      <div class="content-section-article programming-language mb-5">
+        <div class="programming-language-header">
+          <h3>[프로그램 언어]</h3>
+        </div>
+        <div class="programming-language-menu">
+          <!-- programming.xml에서 파싱 -->
+        </div>
+      </div>
+      <div class="content-section-article essay mb-5">
+        <div class="essay-header">
+          <h3>[에세이]</h3>
+        </div>
+        <div class="essay-menu">
+          <!-- essay.json에서 파싱 -->
+        </div>
+      </div>
+
+      <div class="content-section-article post">
+        <div class="popular-article">
+          <div class="popular-header">
+            <h3>[인기글]</h3>
+          </div>
+          <div class="popular-content">
+            <table>
+              <thead>
+                <tr>
+                  <th class="post-title">제목</th>
+                  <th>작성자</th>
+                  <th>조회수</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="post-title">자바공부 쉽게하는법!!</td>
+                  <td>이세림</td>
+                  <td>1754</td>
+                </tr>
+                <tr>
+                  <td class="post-title">알고리즘은 자바? 파이썬?</td>
+                  <td>홍정민</td>
+                  <td>987</td>
+                </tr>
+                <tr>
+                  <td class="post-title">스프링 정복하기</td>
+                  <td>김나연</td>
+                  <td>620</td>
+                </tr>
+              </tbody>
+            </table>
+  
+          </div>
+        </div>
+        <div class="last-article">
+          <div class="last-header">
+            <h3>[최신글]</h3>
+          </div>
+          <div class="last-content">
+            <table>
+              <thead>
+                <tr>
+                  <th class="post-title">제목</th>
+                  <th>작성자</th>
+                  <th>조회수</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="post-title">web 관련 질문있어요.</td>
+                  <td>이준형</td>
+                  <td>12</td>
+                </tr>
+                <tr>
+                  <td class="post-title">vuejs는 이렇게 공부해보세요.</td>
+                  <td>조민기</td>
+                  <td>87</td>
+                </tr>
+                <tr>
+                  <td class="post-title">꽃길만 걸어요.</td>
+                  <td>류혜연</td>
+                  <td>50</td>
+                </tr>
+              </tbody>
+            </table>
+  
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <ul>
+      <li><a href="#">카페 소개</a></li>
+      <li><a href="#">개인정보처리방침</a></li>
+      <li><a href="#">이용약관</a></li>
+      <li><a href="#">오시는길</a></li>
+      <li>&copy;SSAFY Corp.</li>
+    </ul>
+  </div>
+<!-- The Modal -->
+<div class="modal fade" id="vote-modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+    
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">투표 만들기</h4>
+        <!-- x버튼 -->
+        <button type="button" class="close" data-dismiss="modal">&times;</button> 
+      </div>
+      
+      <!-- Modal body -->
+      <div class="modal-body">
+        <form action="">
+          <div class="form-group">
+            <label>시작일
+              <input type="date" class="form-control" name="start-date" id="start-date">
+          </label>
+            <label>종료일
+              <input type="date" class="form-control" name="end-date" id="end-date">
+          </label>
+          </div>
+          <div class="form-group">
+            <label">질문내용
+            <input type="text" class="form-control" placeholder="질문 내용 입력..." name="question" id="question"></label>
+          </div>
+          <div class="form-group">
+            <label>답변항목
+              <button type="button" id="btn-add" class="btn btn-outline-success btn-sm">항목추가</button>
+            </label>
+          </div>
+          <div class="form-group" id="poll-answer-list">
+            <!-- <div class="mb-1">
+              <input type="text" class="form-control" name="answer">
+            </div> -->
+          </div>
+          <div class="form-group text-right">
+            <button type="button" id="btn-make" class="btn btn-primary">투표생성</button>
+          </div>
+        
+        </form>
+      </div>
+      
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+
+
+</html>

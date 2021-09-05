@@ -1,0 +1,241 @@
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: relative;
+}
+
+a{
+  text-decoration: none;
+  color: gray;
+}
+
+a:hover{
+  cursor: pointer;
+  color: black;
+  font-weight: bold;
+}
+
+.header{
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  height: 100px;
+  line-height: 100px;
+  margin: auto;
+  border-radius: 5px;
+}
+
+.header > .nav{
+  margin: auto;
+  height: 100px;
+}
+
+
+.nav li{
+  margin: 10px;
+  max-width: 1200px;
+  float: left;
+  height: 70px;
+  position: relative;
+}
+
+.header-admin{
+  float: right;
+  width: 450px;
+}
+
+.login{
+  float: right;
+}
+
+.logout{
+  /* 처음에 none 해버리면 다시 안나타남. */
+  /* display: none;  */
+  float: right;
+}
+
+/* content */
+.content{
+  margin: 10px auto;
+  max-width: 1200px;
+
+}
+
+.content-left{
+  float: left;
+  width: 25%; 
+}
+
+.content-left-profile{
+  margin: 0px 10px;
+  width: auto;
+  height: 200px;
+  text-align: center;
+}
+
+.content-left-profile > img{
+  width: 150px;
+  margin-top: 20px;
+}
+
+.store-open{
+  margin: 0 10px;
+  width: auto;
+  text-align: center;
+  padding: 10px;
+  border: 1px solid white;
+  border-radius: 5px;
+  background-color: rgb(167, 167, 167);
+}
+
+.store-close{
+  width: auto;
+  text-align: center;
+  padding: 10px;
+  margin: 0 10px;
+  border: 1px solid white;
+  border-radius: 5px;
+  background-color: rgb(167, 167, 167);
+}
+
+.store-area{
+  border: 1px solid white;
+  /* color: purple; */
+  font-weight: bold;
+  background-color: rgb(196, 196, 196);
+  border-radius: 5px;
+  padding: 10px;
+  margin: 0 10px;
+
+
+}
+
+.store-area > ul > li{
+  color: black;
+  font-weight: normal;
+  padding-left: 10px;
+  margin: 10px;
+}
+
+.content-left-poll{
+  margin: 10px;
+}
+
+li.nav-item{
+  margin: 0;
+  height: 50px;
+}
+
+.poll-date{
+  font-size: 14px;
+}
+
+label img{
+  width: 35px;
+  border-radius: 3px;
+}
+
+.vote-button{
+  text-align: right;
+  padding-right: 10px;
+  margin: 10px;
+}
+
+.vote-date{
+  margin: 20px 0 10px;
+  font-weight: bold;
+  color: gray;
+}
+
+.button {
+  background: white;
+  color: black;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  padding: 4px;
+}
+
+.btn-primary {
+  border-color: rgba(128, 0, 128, 0.3);
+  background: rgb(128, 0, 128);
+  color: #fff;
+}
+
+
+/* content section */
+
+.content-section{
+  float: right;
+  width: 72%;
+}
+
+.content-section-article{
+  clear: both;
+  margin: 20px 0;
+  height: 280px;
+}
+
+.content-section-article h3{
+  margin-bottom: 30px;
+}
+
+.content-section-article img{
+  width: 150px;
+}
+
+.content-section-article li {
+  float: left;
+  width: 200px;
+  text-align: center;
+}
+
+/* 게시글 */
+
+.popular-article{
+  float: left;
+  width: 50%;
+}
+.last-article{
+  float: right;
+  width: 50%;
+}
+
+.post .post-title{
+  width: 65%;
+
+}
+
+.popular-article th, .popular-article td{
+  padding: 10px;
+}
+
+.popular-article tbody tr:nth-child(odd){
+  background-color: rgb(245, 244, 244);
+}
+
+.last-article table, .last-article th, .last-article td{
+  border: 1px solid rgb(189, 186, 186);
+  border-collapse: collapse;
+  padding: 10px;
+}
+
+.post td:last-child{
+  text-align: right;
+}
+
+.footer{
+  clear: both;
+  height: 50px;
+  line-height: 50px;
+  margin: 0 auto 30px;
+  max-width: 1200px;
+}
+
+
+.footer li{
+  color: gray;
+  float: left;
+  padding-left: 20px;
+}
+
+.footer li > a{
+  color: gray;
+}
