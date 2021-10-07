@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>명함등록</title>
+  <style>
+    table{
+      border: 1px solid blue;
+      width: 800px;
+      padding: 10px;
+    }
+    .phone{
+      width: 50px;
+    }
+    .address{
+      width: 300px;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h3>SSAFY JSP</h3>
+    <hr color="black">
+  </div>
+  <div class="content">
+    <h3>명함 등록</h3>
+    <form action="/workshop_back11/mainservlet" method="post">
+      <table>
+        <tr>
+          <td>이름</td>
+          <td><input type="text" name="name" id="name"></td>
+        </tr>
+        <tr>
+          <td>회사명</td>
+          <td><input type="text" name="company" id="company"></td>
+          <td>부서명 <input type="text" name="part" id="part"></td>
+        </tr>
+        <tr>
+          <td>이메일</td>
+          <td><input type="email" name="email" id="email"></td>
+        </tr>
+        <tr>
+          <td>휴대폰</td>
+          <td>
+            <input class="phone" type="text" name="phone1" id="phone1"> -
+            <input class="phone" type="text" name="phone2" id="phone2"> -
+            <input class="phone" type="text" name="phone3" id="phone3">
+          </td>
+        </tr>
+        <tr>
+          <td>주소</td>
+          <td colspan="2">
+            <input class="address" type="text" name="address1" id="address1">
+            <input type="text" name="address2" id="address2">
+          </td>
+        </tr>
+      </table>
+      <button>확인</button>
+    </form>
+  </div>
+  <div class="footer">
+    <br><br><hr color="black">
+    <h3>Copyright 2021 SSAFY by kjin</h3>
+  </div>
+  
+</body>
+</html>
