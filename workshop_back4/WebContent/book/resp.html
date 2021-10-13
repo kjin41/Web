@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>SSAFY - 글목록</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        mark.sky {
+            background: linear-gradient(to top, #54fff9 20%, transparent 30%);
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+</head>
+<body>
+    <div class="container text-center mt-3">
+        <div class="col-lg-8 mx-auto">
+            <h2 class="p-3 mb-3 shadow bg-light"><mark class="sky">글목록</mark></h2>
+            <div class="m-3 text-right">
+                <button type="button" id="mvRegisterBtn" class="btn btn-link">글작성</button>
+            </div>
+            <table class="table table-active text-left">
+                <tbody>
+                    <tr class="table-info">
+                        <td>도서번호 : </td>
+                        <td class="text-right">도서이름 : </td>
+                    </tr>
+                    <tr class="table-info">
+                        <td>저자 : </td>
+                        <td class="text-right">가격 : </td>
+                    </tr>
+                    <tr>
+                        <td>설명 : </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
