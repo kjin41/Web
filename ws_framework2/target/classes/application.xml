@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+
+	<bean id="bService" class="com.ssafy.ws.model.service.BookServiceImpl">
+		<property name="bookRepo" ref="bRepo"/>
+	</bean>
+	<bean id="bRepo" class="com.ssafy.ws.model.repo.BookRepoImpl">
+		<property name="dataSource" ref="ds"/>
+	</bean>
+	<bean id="ds" class="org.springframework.jdbc.datasource.SimpleDriverDataSource">
+		<property name="driverClass" value="com.mysql.cj.jdbc.Driver"/>
+		<property name="url" value="jdbc:mysql://127.0.0.1:3306/ssafydb?serverTimezone=UTC&amp;useUniCode=yes&amp;characterEncoding=UTF-8"/>
+		<property name="username" value="ssafy"/>
+		<property name="password" value="ssafy"/>
+	</bean>
+	
+	
+	
+	<bean id="uService" class="com.ssafy.ws.model.service.UserServiceImpl">
+		<!-- <constructor-arg value="userRepo" ref="uRepo"/> -->
+		<property name="userRepo" ref="uRepo"></property>
+	</bean>
+	<!-- 
+	<bean id="uRepo" class="com.ssafy.ws.model.repo.UserRepoImpl">
+		<property name="dataSource" ref="uds"/>
+	</bean>
+	 -->
+	<bean id="uRepo" class="com.ssafy.ws.model.repo.UserRepoImpl">
+		<property name="dataSource" ref="ds"/>
+		<!-- <constructor-arg ref="uds"/> -->
+	</bean>
+	 
+	<!-- 	<bean id="uds" class="org.springframework.jdbc.datasource.SimpleDriverDataSource">
+		<property name="driverClass" value="com.mysql.cj.jdbc.Driver"/>
+		<property name="url" value="jdbc:mysql://127.0.0.1:3306/ssafydb?serverTimezone=UTC&amp;useUniCode=yes&amp;characterEncoding=UTF-8"/>
+		<property name="username" value="ssafy"/>
+		<property name="password" value="ssafy"/>
+	</bean>
+	  -->
+	 
+	
+</beans>
