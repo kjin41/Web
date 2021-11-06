@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>도서관리</title>
+  <link rel="stylesheet" href="./css/main.css" />
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <div class="header">
+      <a href="index.html"> <img src="./img/ssafy_logo.png" class="ssafy_logo" /></a>
+      <p class="logo">도서관리</p>
+    </div>
+    <div>
+      <h1>SSAFY 도서 삭제</h1>
+      <div>삭제중...</div>
+    </div>
+  </div>
+  <script>
+    new Vue({
+      el: "#app",
+      created() {
+        const params=new URL(document.location).searchParams;
+        let param=params.get("isbn");
+        let books=JSON.parse(localStorage.getItem("books"));
+        
+        books=books.filter(book=>{
+          return book.isbn!=param;
+        });
+
+        localStorage.setItem("books", JSON.stringify(books));
+        alert("도서 삭제 성공");
+        location.href="./list.html";
+      }
+    })
+
+    // new Vue({
+      
+    //   el: "#app",
+    //   created() {
+    //     const books=JSON.parse(localStorage.getItem("books"))
+    //     let params=new URL(document.location).searchParams;
+    //     let param=params.get("isbn");
+    //     for (key in this.books){
+    //       console.log(param);
+    //       if (this.books[key].isbn==param){
+    //         // localStorage.removeItem("books")[key]
+    //         this.books.splice(key, 1);
+    //         // this.book=this.books[key];
+    //         // console.log(this.books[key].isbn);
+    //         localStorage.setItem("books", JSON.stringify(this.books));
+    //         location.reload();
+    //         console.log(key);
+    //         break;
+    //       }
+    //     }
+
+    //     return {
+    //       book: "",
+    //     }
+    //   },
+    //   data(){
+    //     return{
+    //       msg: "삭제되었습니다."
+    //     }
+    //   }
+    // })
+  </script>
+</body>
+
+</html>
