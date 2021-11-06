@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="centerList.js"></script>
+    <title>Vue HW2-2</title>
+    <style>
+        th, td{
+            padding: 0 10px 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <h2>코로나 19 예방접종센터 상세 페이지</h2>
+        <table border="1">
+            <tbody>
+                <tr>
+                    <td align="center">센터명</td>
+                    <td>{{center.centerName}}</td>
+                </tr>
+                <tr>
+                    <td align="center">센터유형</td>
+                    <td>{{center.centerType}}</td>
+                </tr>
+                <tr>
+                    <td align="center">주소</td>
+                    <td>{{center.address}}</td>
+                </tr>
+                <tr>
+                    <td align="center">센터시설명</td>
+                    <td>{{center.org}}</td>
+                </tr>
+                <tr>
+                    <td align="center">전화번호</td>
+                    <td>{{center.phoneNumber}}</td>
+                </tr>
+                <tr>
+                    <td align="center">생성일</td>
+                    <td>{{center.createdAt}}</td>
+                </tr>
+                <tr>
+                    <td align="center">수정일</td>
+                    <td>{{center.updatedAt}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        new Vue({
+            el: "#app",
+            created(){
+                var params=new URL(document.location).searchParams;
+                var param=params.get("id");
+                for (key in centerList.data){
+                    if (centerList.data[key].id==param){
+                        var center = centerList.data[key];
+                        this.center=center;
+                        // console.log(`${key}: ${centerList.data[key].id}`);
+                        break;
+                    }
+                }
+                return {
+                    center: ""
+                }
+            }
+        })
+
+        
+    </script>
+    
+</body>
+</html>
