@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>SSAFY HW 1-2</title>
+</head>
+<body>
+    <div id="app">
+        <form action="">
+            <div>작성자 <input type="text" v-model="name"></div>
+            <div>제목 <input type="text" v-model="title"></div>
+            <div>내용 <textarea v-model="content"></textarea></div>
+            <br>
+            <div>
+                <button type="button" @click="save()">저장</button>
+                <button type="button" @click="print()">출력</button>
+            </div>
+        </form>
+    </div>
+    <script>
+        new Vue({
+            el: "#app",
+            data(){
+                return {
+                    name: "",
+                    title: "",
+                    content: ""
+                }
+            },
+            methods: {
+                save(){
+                    let form = {
+                        name: this.name,
+                        title: this.title,
+                        content: this.content
+                    };
+
+                    localStorage.setItem("form", JSON.stringify(form));
+                    location.reload();
+                },
+                print(){
+                    let form=JSON.parse(localStorage.getItem("form"));
+                    console.log(form);
+                }
+
+            }
+        })
+    </script>
+</body>
+</html>
