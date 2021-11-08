@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>도서관리</title>
+  <link rel="stylesheet" href="./css/main.css" />
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <header-nav></header-nav>
+    <book-view></book-view>
+  </div>
+  <template id="BookView">
+    <div class="regist">
+      <h1 class="underline">SSAFY 도서 정보</h1>
+      <div class="regist_form">
+        <label for="isbn">도서번호</label>
+        <div class="view">{{book.isbn}}</div>
+        <label for="title">도서명</label>
+        <div class="view">{{book.title}}</div>
+        <label for="author">저자</label>
+        <div class="view">{{book.author}}</div>
+        <label for="price">가격</label>
+        <div class="view">{{book.price}}</div>
+        <label for="content">설명</label>
+        <div class="view">{{book.content}}</div>
+        <div style="padding-top: 15px">
+          <a :href="`./modify.html?isbn=${book.isbn}`" class="btn">수정</a>
+          <a :href="`./delete.html?isbn=${book.isbn}`" class="btn">삭제</a>
+          <a href="./list.html" class="btn">목록</a>
+        </div>
+      </div>
+    </div>
+  </template>
+  <script type="module">
+    import HeaderNav from "./components/HeaderNav.js";
+    import BookView from "./components/BookView.js";
+    new Vue({
+      el: "#app",
+      components: {
+        HeaderNav,
+        BookView
+      }
+    })
+  </script>
+</body>
+
+</html>
